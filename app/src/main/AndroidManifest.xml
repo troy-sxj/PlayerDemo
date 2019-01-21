@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mika.player">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="ratio_float" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".MediaApiActivity" />
+
+        <activity android:name=".MediaPlayerActivity" />
+        <activity android:name=".VideoViewActivity" />
+        <activity android:name=".TestSurfaceActivity" />
+        <activity android:name=".surface.LiveCameraActivity">
+
+        </activity>
+        <activity android:name=".PlayerTestActivity"/>
+        <activity android:name=".grafika.ContinuousCaptureActivity">
+
+        </activity>
+        <activity android:name=".camera.Camera2BasicActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
